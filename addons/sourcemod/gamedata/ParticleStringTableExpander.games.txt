@@ -1,0 +1,70 @@
+"Games"
+{
+	"#default"
+	{
+		"#supported"
+		{
+			"engine"	"csgo"
+		}
+
+		"Keys"
+		{
+		}
+
+		"Offsets"
+		{
+		}
+
+		"Addresses"
+		{
+		}
+
+		"Signatures"
+		{
+			// Str: "Only %i string tables allowed, can't create'%s'"  ^  CNetworkStringTableContainer::CreateStringTable
+			//   -> networkstringtable.cpp
+			//      INetworkStringTable *CNetworkStringTableContainer::CreateStringTable( const char *tableName, int maxentries, int userdatafixedsize /*= 0*/, int userdatanetworkbits /*= 0*/, int flags /*= NSF_NONE*/ )
+			"CNetworkStringTableContainer::CreateStringTable"
+			{
+				"library"		"engine"
+				"windows"		"\x55\x8B\xEC\x53\x56\x57\x8B\xF9\x80\x7F\x04\x00"
+				"linux"			"\x55\x89\xE5\x83\xEC\x58\x89\x5D\xF4\x8B\x5D\x08\x89\x7D\xFC"
+			}
+		}
+
+		"Functions"
+		{
+			"CNetworkStringTableContainer::CreateStringTable"
+			{
+				"signature"	"CNetworkStringTableContainer::CreateStringTable"
+				"callconv"	"thiscall"
+				"this"		"address"
+				"return"	"int"
+				"arguments"
+				{
+					"tableName"
+					{
+						"type"	"object"
+						"size"	"4"
+					}
+					"maxentries"
+					{
+						"type"	"int"
+					}
+					"userdatafixedsize"
+					{
+						"type"	"int"
+					}
+					"userdatanetworkbits"
+					{
+						"type"	"int"
+					}
+					"flags"
+					{
+						"type"	"int"
+					}
+				}
+			}
+		}
+	}
+}
