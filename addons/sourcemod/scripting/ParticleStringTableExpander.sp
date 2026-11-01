@@ -12,7 +12,7 @@ public Plugin myinfo =
 	name = "Particle String Table Expander",
 	author = "PŠΣ™ SHUFEN",
 	description = "",
-	version = "0.1",
+	version = "0.1.1",
 	url = "https://possession.jp"
 };
 
